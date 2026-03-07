@@ -5,13 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Legal Quiz | Test Your Law Knowledge</title>
+<!-- SEO TITLES AND DESCRIPTION -->
+<title>Laxoshedu Quiz Platform | Best Free Online Quiz Maker & Practice Tool</title>
+<meta name="description" content="Laxoshedu Quiz Platform is the ultimate free tool to create, share, and practice quizzes online. Perfect for teachers, students, and professionals to test knowledge.">
 
-<meta name="description" content="Legal Quiz is an interactive platform where students can test their knowledge of law, constitution, and legal awareness through engaging quizzes designed for learning and exam preparation.">
+<!-- EXTENSIVE KEYWORDS (SEO) -->
+<meta name="keywords" content="quiz platform, create quiz, online quiz maker, free quiz builder, test maker, exam creator, student practice tool, teacher resources, educational technology, edtech, learning tools, interactive quizzes, multiple choice questions, trivia maker, study tool, knowledge test, online assessment, classroom tools, e-learning, remote learning, quiz app, best quiz site, quiz generator, practice test, mock exam, certification practice, vocabulary quiz, math quiz, science test, history trivia, coding quiz, corporate training, hr assessment, employee testing, quiz for friends, viral quiz, personality test, scored quiz, graded assessment, auto-grading quiz, mobile friendly quiz, responsive quiz tool, html quiz, javascript quiz, educational games, brain training, memory improvement, active recall, spaced repetition, study aid, homework helper, exam preparation, sat practice, gre practice, competition quiz, pub quiz, trivia night, survey maker, poll creator, feedback tool, customer engagement, lead generation quiz, fun quizzes, academic testing, university exam, school test, primary school quiz, high school assessment, college quiz, professional development, lms compatible, no login quiz, instant feedback, quiz analytics, performance tracking, study groups, online classroom, virtual testing, paperless exam, eco-friendly testing, digital assessment, secure exam, cheat prevention, timed quiz, random questions, question bank, laxoshedu, quiz software, saas quiz">
 
-<meta name="keywords" content="legal quiz, law quiz, constitution quiz, legal awareness quiz, law gk questions, judiciary exam quiz">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- OPEN GRAPH (Social Media) -->
+<meta property="og:title" content="Laxoshedu Quiz Platform | Create & Practice Quizzes">
+<meta property="og:description" content="The best free tool to create and practice quizzes online. enhance your learning today.">
+<meta property="og:type" content="website">
 
 <style>
 
@@ -19,129 +23,341 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Poppins', sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-min-height:100vh;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
-display:flex;
-flex-direction:column;
-align-items:center;
+line-height: 1.6;
 }
 
+/* HEADER */
+
 header{
-width:100%;
-padding:20px;
 display:flex;
-justify-content:center;
-backdrop-filter: blur(10px);
-background: rgba(255,255,255,0.05);
-border-bottom:1px solid rgba(255,255,255,0.1);
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .logo{
-font-size:28px;
+font-size:22px;
 font-weight:bold;
-letter-spacing:1px;
+color: #00ffff;
+text-shadow: 0 0 10px rgba(0,255,255,0.5);
+display: flex;
+align-items: center;
+gap: 10px;
 }
+
+/* Custom Quiz Icon in Logo */
+.logo svg {
+stroke: #00ffff;
+filter: drop-shadow(0 0 5px cyan);
+}
+
+/* NAV & MENU BUTTON */
+
+.menu-btn {
+display: none;
+font-size: 28px;
+cursor: pointer;
+color: white;
+}
+
+nav {
+display: flex;
+align-items: center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:16px;
+opacity:0.9;
+transition: 0.3s;
+position: relative;
+}
+
+nav a:hover{
+opacity:1;
+color: #00ffff;
+}
+
+/* HERO */
 
 .hero{
 text-align:center;
-padding:80px 20px;
+padding:100px 20px;
 max-width:900px;
-animation: fadeIn 1.5s ease;
+margin:auto;
 }
 
 .hero h1{
-font-size:48px;
+font-size:42px;
 margin-bottom:20px;
+background: -webkit-linear-gradient(#fff, #00ffff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .hero p{
 font-size:18px;
-line-height:1.8;
 opacity:0.9;
+max-width: 700px;
+margin: 0 auto;
 }
 
-.start-btn{
-margin-top:35px;
-padding:15px 40px;
-font-size:18px;
+/* BUTTONS WITH BLINKING ATTENTION EFFECT */
+
+.buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.btn{
+padding:16px 36px;
 border:none;
-border-radius:30px;
+border-radius:50px;
 cursor:pointer;
-background: rgba(255,255,255,0.15);
-backdrop-filter: blur(10px);
-color:white;
+font-size:18px;
+font-weight: bold;
+color:#0f2027;
+background: #00ffff;
 transition:0.3s;
+/* Blinking Animation */
+animation: attract-blink 2s infinite ease-in-out;
 }
 
-.start-btn:hover{
-transform:scale(1.08);
-background: rgba(255,255,255,0.3);
+.btn:hover{
+animation: none; /* Stop blinking on hover */
+transform:scale(1.1);
+background: white;
+box-shadow: 0 0 30px rgba(0,255,255,1);
 }
+
+@keyframes attract-blink {
+0% {
+transform: scale(1);
+box-shadow: 0 0 10px rgba(0,255,255,0.4);
+opacity: 1;
+}
+50% {
+transform: scale(1.05);
+box-shadow: 0 0 25px rgba(0,255,255,0.8);
+opacity: 0.9;
+}
+100% {
+transform: scale(1);
+box-shadow: 0 0 10px rgba(0,255,255,0.4);
+opacity: 1;
+}
+}
+
+/* FEATURES */
 
 .features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-max-width:1000px;
-margin-top:60px;
+max-width:1100px;
+margin:60px auto;
 padding:20px;
 }
 
 .card{
-background: rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.05);
 border-radius:20px;
 padding:30px;
 text-align:center;
-backdrop-filter: blur(15px);
-border:1px solid rgba(255,255,255,0.15);
+border:1px solid rgba(0,255,255,0.2);
 transition:0.4s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-background: rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.1);
+border-color: #00ffff;
+box-shadow:0 0 30px rgba(0,255,255,0.2);
 }
 
-.card i{
-font-size:40px;
+.icon{
 margin-bottom:20px;
-color:#ffd369;
+filter: drop-shadow(0 0 5px cyan);
 }
 
 .card h3{
-margin-bottom:10px;
+font-size: 22px;
+margin-bottom: 10px;
+color: #e0f7fa;
 }
 
-.content{
+/* HOW */
+
+.steps{
 max-width:1000px;
-margin-top:70px;
+margin:40px auto;
 padding:20px;
-line-height:1.8;
-font-size:17px;
-opacity:0.95;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
+
+.step{
+background:rgba(0,0,0,0.2);
+padding:25px;
+border-radius:15px;
+border-left:4px solid #00ffff;
+}
+
+.step h3{
+margin-bottom: 10px;
+color: #00ffff;
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+max-width: 900px;
+margin: 60px auto;
+padding: 20px;
+background: rgba(255,255,255,0.03);
+border-radius: 15px;
+}
+
+.content-section h2 {
+font-size: 32px;
+margin-bottom: 25px;
+color: #00ffff;
+text-align: center;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+padding-bottom: 15px;
+}
+
+.text-block {
+margin-bottom: 30px;
+font-size: 17px;
+color: #e0e0e0;
+text-align: justify;
+}
+
+.text-block h3 {
+color: white;
+font-size: 22px;
+margin-bottom: 10px;
+margin-top: 20px;
+}
+
+.text-block ul {
+margin-left: 20px;
+margin-top: 10px;
+}
+
+.text-block li {
+margin-bottom: 10px;
+}
+
+/* DEMO */
+
+.demo-section{
+text-align:center;
+margin:60px 20px;
+}
+
+.demo-btn{
+padding:16px 40px;
+border-radius:40px;
+border:2px solid #00ffff;
+background:transparent;
+color:#00ffff;
+font-size: 16px;
+font-weight: bold;
+cursor:pointer;
+transition: 0.3s;
+}
+
+.demo-btn:hover{
+background: #00ffff;
+color: #0f2027;
+box-shadow: 0 0 20px rgba(0,255,255,0.6);
+}
+
+/* FOOTER */
 
 footer{
-margin-top:60px;
-padding:20px;
+margin-top:80px;
+padding:40px 20px;
+background:rgba(0,0,0,0.3);
 text-align:center;
-opacity:0.8;
+border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
+.footer-links{
+margin-top:20px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
 }
-to{
-opacity:1;
-transform:translateY(0);
+
+.footer-links a{
+color:#00ffff;
+text-decoration:none;
+font-size:14px;
+transition: 0.3s;
 }
+
+.footer-links a:hover{
+text-decoration:underline;
+color: white;
+text-shadow: 0 0 5px #00ffff;
+}
+
+/* RESPONSIVE / MOBILE MENU STYLES */
+
+@media(max-width: 768px){
+
+.hero h1{ font-size:32px; }
+
+.menu-btn {
+display: block; /* Show hamburger on mobile */
+}
+
+nav {
+display: none; /* Hide links by default on mobile */
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+background: rgba(15, 32, 39, 0.98);
+flex-direction: column;
+padding: 20px 0;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+nav.active {
+display: flex; /* Show when active class added via JS */
+}
+
+nav a {
+margin: 15px 0;
+font-size: 18px;
+width: 100%;
+text-align: center;
+}
+
+.text-block { text-align: left; }
 }
 
 </style>
@@ -151,96 +367,191 @@ transform:translateY(0);
 <body>
 
 <header>
+
+<!-- LOGO WITH NEW ICON -->
 <div class="logo">
-<i class="fas fa-scale-balanced"></i> Legal Quiz
+<!-- SVG ICON: Clipboard with Checkmark -->
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+<rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+<path d="M9 14l2 2 4-4"></path>
+</svg>
+Laxoshedu Quiz Platform
 </div>
+
+<!-- HAMBURGER MENU BUTTON -->
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<!-- NAVIGATION LINKS -->
+<nav id="navbar">
+<a href="#">Home</a>
+<a href="#features">Features</a>
+<a href="#about">About</a>
+<a href="#how">How It Works</a>
+<a href="#faq">FAQ</a>
+</nav>
+
 </header>
 
 <section class="hero">
 
-<h1>Test Your Legal Knowledge</h1>
+<h1>The Ultimate Online Quiz Maker & Practice Tool</h1>
 
 <p>
-Welcome to Legal Quiz, an interactive learning platform designed for students,
-law enthusiasts, and anyone interested in understanding the fundamentals of law,
-constitution, and legal awareness. Our quizzes are created to make learning law
-simple, engaging, and enjoyable while helping users strengthen their knowledge
-through practice.
+The Laxoshedu Quiz Platform is a powerful, free, and intuitive tool designed for everyone. Whether you are a teacher creating exams, a student preparing for a test, or a business professional conducting training, our platform makes it effortless to create quizzes and practice quizzes online.
 </p>
 
+<!-- BUTTONS WITH BLINKING EFFECT -->
+<div class="buttons">
+
 <a href="legalquiz/">
-<button class="start-btn">
-<i class="fas fa-play"></i> Start Quiz
+<button class="btn">Start Making Quizzes</button>
+</a>
+
+<a href="legalquiz/">
+<button class="btn">Practice Quizzes</button>
+</a>
+
+</div>
+
+</section>
+
+<section class="features" id="features">
+
+<div class="card">
+<div class="icon">
+<svg width="40" height="40" fill="cyan" viewBox="0 0 24 24">
+<path d="M4 4h16v2H4zm0 5h16v2H4zm0 5h10v2H4z"/>
+</svg>
+</div>
+<h3>Create Unlimited Quizzes</h3>
+<p>Build custom quizzes with multiple-choice questions, true/false, and more without any restrictions.</p>
+</div>
+
+<div class="card">
+<div class="icon">
+<svg width="40" height="40" fill="cyan" viewBox="0 0 24 24">
+<path d="M12 2L1 9l11 7 11-7z"/>
+</svg>
+</div>
+<h3>Interactive Practice</h3>
+<p>Engage with dynamic content that gives instant feedback to help you understand your mistakes.</p>
+</div>
+
+<div class="card">
+<div class="icon">
+<svg width="40" height="40" fill="cyan" viewBox="0 0 24 24">
+<path d="M12 4a8 8 0 100 16 8 8 0 000-16z"/>
+</svg>
+</div>
+<h3>Boost Retention</h3>
+<p>Utilize the power of active recall and spaced repetition through our structured testing environment.</p>
+</div>
+
+</section>
+
+<section class="steps" id="how">
+<div class="step">
+<h3>1. Design</h3>
+<p>Input your questions, define correct answers, and customize settings.</p>
+</div>
+<div class="step">
+<h3>2. Share</h3>
+<p>Distribute your quiz link to students, friends, or colleagues instantly.</p>
+</div>
+<div class="step">
+<h3>3. Analyze</h3>
+<p>Review results and understand performance gaps immediately.</p>
+</div>
+</section>
+
+<!-- DETAILED CONTENT SECTION -->
+
+<div class="content-section" id="about">
+<h2>Why Choose Laxoshedu?</h2>
+
+<div class="text-block">
+<h3>A Comprehensive Solution for Digital Assessment</h3>
+<p>
+In the digital age, traditional paper-and-pen testing is becoming obsolete. The <strong>Laxoshedu Quiz Platform</strong> bridges the gap between traditional learning and modern technology. We provide a seamless interface where users can generate comprehensive assessments in minutes. Unlike other tools that hide features behind paywalls, Laxoshedu is committed to accessibility.
+</p>
+
+<h3>No Technical Skills Required</h3>
+<p>
+You do not need to be a coder or a tech wizard to use our quiz maker. Our "What You See Is What You Get" interface allows you to type your questions, select the correct answers, and publish with a single click. The platform handles all the backend logic, grading, and score calculation.
+</p>
+</div>
+
+<div class="text-block">
+<h3>Who Is This Platform For?</h3>
+<ul>
+<li><strong>Educators & Teachers:</strong> Create pop quizzes, midterm exams, or homework assignments.</li>
+<li><strong>Students & Learners:</strong> Create your own flashcard-style quizzes to prepare for exams.</li>
+<li><strong>HR & Businesses:</strong> Conduct employee onboarding and safety training assessments.</li>
+<li><strong>Content Creators:</strong> Engage your audience with viral quizzes.</li>
+</ul>
+</div>
+
+</div>
+
+<div class="content-section">
+<h2>The Power of Quiz-Based Learning</h2>
+
+<div class="text-block">
+<p>
+Research in cognitive psychology has repeatedly demonstrated that <em>Active Recall</em>—the process of retrieving information from memory—is significantly more effective than passive review. When you use the Laxoshedu Quiz Platform to practice quizzes, you are forcing your brain to create stronger neural pathways.
+</p>
+</div>
+</div>
+
+<div class="content-section" id="faq">
+<h2>Frequently Asked Questions</h2>
+
+<div class="text-block">
+<h3>Is the Laxoshedu Quiz Platform free to use?</h3>
+<p>Yes, our core mission is to provide accessible educational tools without hidden fees.</p>
+
+<h3>Can I use this on my mobile phone?</h3>
+<p>Absolutely. The entire platform is built with a "Mobile-First" design philosophy.</p>
+
+<h3>How do I share my quiz?</h3>
+<p>Once you finish creating a quiz, a unique URL is generated that you can copy and share anywhere.</p>
+</div>
+</div>
+
+<div class="demo-section">
+
+<a href="YOUR_DEMO_LINK_HERE">
+<button class="demo-btn">
+Watch Demo Videos & Tutorials
 </button>
 </a>
 
-</section>
-
-<section class="features">
-
-<div class="card">
-<i class="fas fa-book"></i>
-<h3>Learn Law Basics</h3>
-<p>Understand important legal concepts, constitutional principles, and judicial knowledge through interactive quiz questions.</p>
 </div>
-
-<div class="card">
-<i class="fas fa-brain"></i>
-<h3>Test Your Knowledge</h3>
-<p>Challenge yourself with multiple-choice questions designed to improve legal awareness and strengthen analytical thinking.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-graduation-cap"></i>
-<h3>Exam Preparation</h3>
-<p>Practice quizzes helpful for competitive exams, judiciary preparation, and law entrance tests.</p>
-</div>
-
-</section>
-
-<section class="content">
-
-<p>
-Legal knowledge plays an important role in modern society. Understanding the
-basic principles of law and constitutional rights helps individuals become more
-aware citizens and improves their ability to make informed decisions. The
-Legal Quiz platform is designed to support this goal by providing a structured
-and engaging environment where users can practice questions related to law,
-legal systems, and constitutional topics.
-</p>
-
-<p>
-Our quizzes cover a variety of topics including constitutional law, legal
-terminology, fundamental rights, important legal doctrines, and general legal
-awareness. Each question is carefully designed to encourage learning while
-maintaining a fun and engaging quiz format. Whether you are a student studying
-law, preparing for competitive examinations, or simply interested in legal
-knowledge, Legal Quiz provides an easy and effective way to practice and test
-your understanding.
-</p>
-
-<p>
-The platform is built with a simple and user-friendly interface so that anyone
-can quickly start learning without complicated steps. The goal is to create a
-learning environment where knowledge and curiosity work together. By answering
-questions, reviewing concepts, and exploring legal topics, users can gradually
-improve their understanding of the legal system.
-</p>
-
-<p>
-Legal Quiz also encourages continuous learning. As new quizzes and topics are
-added, users can return regularly to test their progress and explore more legal
-questions. This makes the platform not only a quiz website but also a growing
-learning resource for legal education and awareness.
-</p>
-
-</section>
 
 <footer>
 
-<p>© 2026 Legal Quiz | Learn Law Through Quizzes</p>
+<p>© 2026 Laxoshedu Quiz Platform. All rights reserved.</p>
+
+<div class="footer-links">
+<a href="privacy/">Privacy Policy</a>
+<a href="terms/">Terms & Conditions</a>
+<a href="disclaimer/">Disclaimer</a>
+<a href="contact/">Contact Us</a>
+<a href="sitemap/">Sitemap</a>
+</div>
 
 </footer>
+
+<!-- JAVASCRIPT FOR MOBILE MENU TOGGLE -->
+<script>
+function toggleMenu() {
+var navbar = document.getElementById("navbar");
+navbar.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
