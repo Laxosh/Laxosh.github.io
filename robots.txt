@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace the URL below with your actual deployed Admin Backend URL + ?action=sitemap
+Sitemap: https://script.google.com/macros/s/YOUR_ADMIN_BACKEND_ID/exec?action=sitemap
