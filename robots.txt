@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace the URL below with your actual deployed Admin Backend URL + ?action=sitemap
-Sitemap: https://laxosh.github.io/sitemap.xml
+Sitemap: https://laxosh.github.io/quizcolo/sitemap.xml
